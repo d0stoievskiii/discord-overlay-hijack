@@ -41,18 +41,14 @@ namespace discord {
     }
 
     inline void sendFrame(DiscordController& DC, uint32_t width, uint32_t height, void* frame, size_t size) {
-        printf("h\n");
 
         DC.framebuffer->Width = width;
         DC.framebuffer->Height = height;
 
-        printf("i\n");
 
         memcpy(DC.framebuffer->Data, frame, size);
-        printf("j\n");
 
         DC.framebuffer->Sequence++;
-        printf("l\n");
     }
 
 
